@@ -20,8 +20,18 @@ $(document).ready(function(){
     });
 
     $("h1").mouseover(function(){
-      $("h1").css("color","blue");});
+      $("h1").css("color","pink");});
     });
+
+
+//before, after, prepend, postend
+
+$("button").before("<h2>before</h2>");
+$("h1").prepend("<h2>Prepend</h2>");
+$("button").after("<h2>after</h2>");
+$("h1").append("<h2>append</h2>");
+$("h3").remove();
+$("button").slideUp().slideDown().animate({"color":"orange"});
 
 
 
