@@ -12,9 +12,12 @@ app.get('/bmicalculator', (req, res) => {
   res.sendFile(__dirname+"/bmicalculator.html")
 })
 
+//gets our app to use it
 app.use(bodyparser.urlencoded({extended:true}));
-app.post('/bmicalculator',(req,res) => {
 
+
+app.post('/bmicalculator',(req,res) => {
+console.log(req.body);
 var weight=parseFloat(req.body.weight);
 var height=parseFloat(req.body.height);
 var bmi=weight/(height*height);
